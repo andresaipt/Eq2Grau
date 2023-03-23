@@ -1,6 +1,12 @@
 ﻿@{
     // Nesta zona escrevemos código C#
     ViewData["Title"] = "Eq. 2 Grau";
+
+    string resposta = "";
+
+    if (!string.IsNullOrEmpty(ViewBag.X1)) {
+        resposta = "As soluções da equação são: x1 = " + ViewBag.X1 + ", x2 = " + ViewBag.X2;
+    }
 }
 
 <!-- Nesta zona vamos escrever HTML -->
@@ -20,16 +26,24 @@
 <!-- Formulário -->
 <form>
     <!-- Pedir os dados ao utilizador -->
+    <!-- O atributo "id" é interpretador pelo browser -->
+    <!-- O atributo "name" é interpretado pelo servidor -->
     <p>Introduza, por favor, os valores do parâmetros da equação</p>
-    <b>a: </b> <input type="text" />
-    <b>b: </b> <input type="text" />
-    <b>c: </b> <input type="text" />
+    <b>a: </b> <input type="text" name="A" />
+    <b>b: </b> <input type="text" name="B" />
+    <b>c: </b> <input type="text" name="C" />
 
     <!-- Espaçamentos -->
-
     <br />
     <br />
 
     <!-- Botão -->
-    <input type="submit" value="Calcular" onclick="" />
+    <input type="submit" value="Calcular" />
 </form>
+
+<!-- Espaçamentos -->
+<br />
+
+<!-- Resposta -->
+@* Vou recuperar aqui o valor da resposta, preparada na linha 8 *@
+<h4>@resposta</h4>
