@@ -1,0 +1,17 @@
+﻿
+
+1 - Pedir ao utilizador que introduza os valores dos parâmetros (a, b, c)
+	1.1 - Enviar os dados para o servidor
+
+2 - Avalia se pode ser feito o cálculo (a != 0)
+	2.1 - Se verdade, efetuar o cálculo
+		2.1.1 - Delta >= 0
+			x1 = (-b + sqrt(b^2 - 4ac)) / (2a)
+			x2 = (-b - sqrt(b^2 - 4ac)) / (2a)
+		2.1.2 - Delta < 0
+			x1 = -b / (2a) + sqrt(-delta) / (2a) i
+			x2 = -b / (2a) - sqrt(-delta) / (2a) i
+		2.1.3 - Após o cálcuo, notificar o utilizador das soluções
+	2.2 - Se mentira, avisar o utilizador que não se pode calcular as raízes, porque não é uma equação de 2º grau.
+
+	
